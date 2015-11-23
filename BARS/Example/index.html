@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="d3.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Compare Emails</title>
+
+	<style>
+
+		.months{
+			width: 100px;
+			display: inline;
+			margin: 0 50px 0 0;
+		}
+
+		.month{
+			width: 100px;
+			height: 100px;
+			background-color: #cccccc;
+			float: left;
+			margin: 20px 0;
+		}
+
+		.month p{
+			font-size: 15px;
+			padding: 20px;
+		}
+
+		.emails{
+			display: inline;
+			height:700px;
+			width: 620px;
+			overflow: auto;
+		}
+
+		#graphTitle{
+		  font-family: 'Roboto Slab', serif;
+		  font-size: 20px;
+		}
+
+		.graphs{
+			
+		}
+
+	</style>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<section class="months">
+	<div class="month">
+		<p>
+			January
+		</p>
+	</div>
+	<div class="month">
+		<p>
+			February
+		</p>
+	</div>
+	<div class="month">
+		<p>
+			March
+		</p>
+	</div>
+	<div class="month">
+		<p>
+			April
+		</p>
+	</div>
+	<div class="month">
+		<p>
+			May
+		</p>
+	</div>	
+</section>
+
+<section class="emails">
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" bgcolor="#151515" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="pre-header-tagline" style="border-collapse:collapse;font-size:10px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td style="border-collapse:collapse;text-align:center;color:#ee6a30;font-family:helvetica, arial, sans-serif;line-height:16px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									Pre Header copy is needed
+								</td>
+							</tr>
+							<tr>
+								<td style="border-collapse:collapse;text-align:center;color:#a9a9a9;font-family:helvetica, arial, sans-serif;line-height:16px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-decoration:underline;" >
+									View web version
+								</td>
+							</tr>
+						</table>
+					</td>					
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!--//END PRE-HEADER// -->
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="max-image-block" bgcolor="#000000" style="border-collapse:collapse;width:100%;display:block;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:600px;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td width="600" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/taste-freedom.jpg" alt="TASTE FREEDOM" style="line-height:34px;display:block;width:100%;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;font-size:40px;text-align:center;min-height:17px;" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!-- //NAVIGATION -->
+
+<table border="0" align="center" cellpadding="0" cellspacing="0" class="outer-container" bgcolor="#252525" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+    <tr>
+        <td align="center" class="navigation-block footer-navigation" style="border-collapse:collapse;padding-top:15px;padding-bottom:15px;padding-right:0px;padding-left:0px;" >
+        	<table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	            <tr>
+		            <td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<a href="" name="food"  style="font-family:helvetica, arial, sans-serif;line-height:24px;text-decoration:none;color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:15px;" >
+							<span style="color:#ed1c24;font-weight:bold;" >View The Menu</span>
+						</a>
+					</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp; &nbsp;</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<a href="" name="find-hut"  style="font-family:helvetica, arial, sans-serif;line-height:24px;text-decoration:none;color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:15px;" >
+							<span style="color:#ed1c24;font-weight:bold;" >Find a Hut</span>
+						</a>
+					</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp; &nbsp;</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<a href="" name="visit-hut"  style="font-family:helvetica, arial, sans-serif;line-height:24px;text-decoration:none;color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:15px;" >
+							<span style="color:#ed1c24;font-weight:bold;" >Book a Table</span>
+						</a>
+					</td>
+	            </tr>
+        	</table>
+        </td>
+    </tr>
+</table>
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" bgcolor="#5f0000" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td class="vs-gap" style="border-collapse:collapse;height:2px;font-size:2px;line-height:2px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			&nbsp;
+		</td>
+	</tr>
+</table>
+
+<!-- // END NAVIGATION // -->
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="max-image-block" bgcolor="#000000" style="border-collapse:collapse;width:100%;display:block;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:600px;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td width="600" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/ph-logo.jpg" alt="Pizza Hut Restaurants" style="line-height:116px;display:block;width:100%;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="max-image-block" bgcolor="#000000" style="border-collapse:collapse;width:100%;display:block;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:600px;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td width="600" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/welcome.jpg" alt="Welcome" style="line-height:78px;display:block;width:100%;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;font-size:40px;text-align:center;min-height:17px;" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td class="inner-container" bgcolor="#000000" style="border-collapse:collapse;padding-top:0;padding-bottom:20px;padding-right:20px;padding-left:20px;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="block-one" bgcolor="#000000" style="border-collapse:collapse;width:560px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td class="content-block" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+									<p style="font-family:helvetica, arial, sans-serif;line-height:10px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp;</p>
+									<h1  align="center" style="font-size:22px;color:#ee6a30;text-align:center;font-family:helvetica, arial, sans-serif;line-height:30px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+										Hi [inser&firstName$],
+									</h1>
+									<p  align="center" style="color:#ffffff;text-align:center;font-family:helvetica, arial, sans-serif;line-height:24px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:14px;" >
+										Your local Pizza Hut in [insert $location$]. Lorem ipsum dolor sit amet, consectetut elit, sed do eisumod temport incidunt ut.
+									</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="max-image-block" bgcolor="#000000" style="border-collapse:collapse;width:100%;display:block;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:600px;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td width="600" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/intro-bottom.jpg" alt="MON-FRI 3PM 'TIL 5PM 1/3 OFF FOOD GET YOUR EATING PANTS READY enjoy!" style="line-height:890px;display:block;width:100%;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td class="inner-container" bgcolor="#000000" style="border-collapse:collapse;padding-top:0;padding-bottom:20px;padding-right:20px;padding-left:20px;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="block-one" bgcolor="#000000" style="border-collapse:collapse;width:560px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td class="content-block" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+									<p style="font-family:helvetica, arial, sans-serif;line-height:10px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp;</p>
+									<h1  align="center" style="font-size:22px;color:#ee6a30;text-align:center;font-family:helvetica, arial, sans-serif;line-height:30px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+										HERE IS YOUR VOUCHER CODE
+									</h1>
+									<h1 align="center" style="color:#f067a6;font-size:22px;text-align:center;font-family:helvetica, arial, sans-serif;line-height:30px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+										XXXX-XXXX-XXXX
+									</h1>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="max-image-block" bgcolor="#000000" style="border-collapse:collapse;width:100%;display:block;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:600px;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td width="600" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/food.jpg" alt="" style="line-height:890px;display:block;width:100%;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" bgcolor="#000000" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="max-image-block" style="border-collapse:collapse;width:100%;display:block;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:600px;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+									<a href=""  style="font-family:helvetica, arial, sans-serif;line-height:24px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+										<img  src="img/check-out.jpg"  alt="FIND YOUR NEAREST HUT" style="display:block;width:100%;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+									</a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" class="outer-container hide" align="center" cellpadding="0" cellspacing="0" bgcolor="#000000" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td class="m-gap" style="border-collapse:collapse;height:70px;font-size:70px;line-height:70px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			&nbsp;
+		</td>
+	</tr>
+</table>
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" bgcolor="#000000" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="hide" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td width="223" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/left.jpg" alt="" style="display:block;height:110px;width:100%;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td class="mob" style="border-collapse:collapse;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#000000" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >	
+							<td width="52" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+								<a href=""  style="font-family:helvetica, arial, sans-serif;line-height:24px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/twitter.jpg" alt="" style="display:block;width:100%;height:110px;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+								</a>
+							</td>							
+							<td width="52" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+								<a href=""  style="font-family:helvetica, arial, sans-serif;line-height:24px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/facebook.jpg" alt="" style="display:block;width:100%;height:110px;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+								</a>
+							</td>
+								
+							<td width="52" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+								<a href=""  style="font-family:helvetica, arial, sans-serif;line-height:24px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/instagram.jpg" alt="" style="display:block;width:100%;height:110px;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+								</a>
+							</td>
+						</table>
+					</td>
+					<td class="hide" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+							<tr>
+								<td width="223" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+									<img  src="img/right.jpg" alt="" style="display:block;width:100%;height:110px;outline-style:none;text-decoration:none;border-width:0;border-style:none;color:#ffffff;text-align:center;" />
+								</td>
+							</tr>	
+						</table>
+					</td>						
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!-- Beginning of Footer -->
+
+<!-- //NAVIGATION -->
+
+<table border="0" align="center" cellpadding="0" cellspacing="0" class="outer-container" bgcolor="#252525" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+    <tr>
+        <td align="center" class="navigation-block footer-navigation" style="border-collapse:collapse;padding-top:15px;padding-bottom:15px;padding-right:0px;padding-left:0px;" >
+        	<table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	            <tr>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<a href="#" name="unsubscribe"  style="font-family:helvetica, arial, sans-serif;line-height:24px;text-decoration:none;color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:15px;" >
+							<span style="color:#ed1c24;font-weight:bold;" >Unsubscribe</span>
+						</a>
+					</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp; &nbsp;</td>
+		            <td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<a href="" name="food"  style="font-family:helvetica, arial, sans-serif;line-height:24px;text-decoration:none;color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:15px;" >
+							<span style="color:#ed1c24;font-weight:bold;" >View The Menu</span>
+						</a>
+					</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp; &nbsp;</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<a href="" name="visit-hut"  style="font-family:helvetica, arial, sans-serif;line-height:24px;text-decoration:none;color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:15px;" >
+							<span style="color:#ed1c24;font-weight:bold;" >Visit Pizza Hut</span>
+						</a>
+					</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp; &nbsp;</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<a href="" name="register"  style="font-family:helvetica, arial, sans-serif;line-height:24px;text-decoration:none;color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:15px;" >
+							<span style="color:#ed1c24;font-weight:bold;" >Register with us</span>
+						</a>
+					</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp; &nbsp;</td>
+					<td style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						<a href="" name="find-hut"  style="font-family:helvetica, arial, sans-serif;line-height:24px;text-decoration:none;color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:15px;" >
+							<span style="color:#ed1c24;font-weight:bold;" >Find a Hut</span>
+						</a>
+					</td>
+	            </tr>
+        	</table>
+        </td>
+    </tr>
+</table>
+
+<!-- // END NAVIGATION // -->
+
+<table border="0" class="outer-container" align="center" cellpadding="0" cellspacing="0" bgcolor="#202020" style="border-collapse:collapse;width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+	<tr>
+		<td height="20" class="grid-8" style="font-size:20px;line-height:20px;border-collapse:collapse;background-color:#202020;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="footer-block" style="border-collapse:collapse;width:600px;font-size:12px;background-color:#efeeee;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+			<table border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#202020" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
+				<tr>
+					<td class="m-gap" style="border-collapse:collapse;height:20px;font-size:20px;line-height:20px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td align="center" class="content-block" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+						<p style="color:#8f8f8f;font-family:helvetica, arial, sans-serif;line-height:24px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >This email is a one-off communication from Pizza Hut and you will not receive future emails unless you have registered to receive marketing communications.</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="s-gap" style="border-collapse:collapse;height:10px;font-size:10px;line-height:10px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td align="center" class="content-block" style="border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;" >
+						<p style="color:#8f8f8f;font-family:helvetica, arial, sans-serif;line-height:24px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >Pizza Hut UK Limited ("Pizza Hut") is a company registered in England and Wales. Reg No. 01072921. Reg. Office: Building 1, Imperial Place. Elstree Way. Borehamwood. Herts WD6 1JN. <br/>VAT no: GB454146652</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="m-gap" style="border-collapse:collapse;height:20px;font-size:20px;line-height:20px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+						&nbsp;
+					</td>
+				</tr>	
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="footer" height="50" style="line-height:25px;border-collapse:collapse;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ></td>
+	</tr>
+</table>
+</section>
+	
+
+
+<section class="graph">
+	<div id="container">
+	  <p id="graphTitle">Clicks</p>
+	</div>
+</section>	
+
+
+
+
+<script>
+
+
+function updateChart(file, title){
+
+  document.getElementById('graphTitle').innerHTML = title;
+
+  d3.selectAll("svg").remove();
+  var currentData = "clicks.tsv"
+
+  currentData = file;
+  d3.tsv(currentData, function(data) {
+
+      var width = 600;
+      var height = 500;
+
+
+      //Scale to fit container
+      var widthScale = d3.scale.linear()
+                         .domain([0, 400])
+                         .range([0, width])
+
+      var heightScale = d3.scale.linear()
+                         .domain([0, 604])
+                         .range([0, height])
+
+
+
+      //Create SVG frame on page and git it width and height
+      var frame = d3.select("div")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .attr("id", function(){return "box";});
+
+
+
+      //Determin width of bars
+      var bars = frame.selectAll("rect")
+                    .data(data)
+                    .enter()
+                      .append("rect")
+                      .attr("width", function(d) {return width / 20})
+                      .attr("height", function(d) {return heightScale(d.clicks);})//d = the value of the data in the array
+                      .attr("x", function (d, i) {return i * width / 12 })//Space the bars out. i = the value's index in the array
+                      .attr("y", height)
+                      .style("fill", "#db2e63");
+                     
+
+      //Animate
+      bars.transition()
+          .duration(1000)    
+           .attr("y", function (d) {return height - heightScale(d.clicks)});//moving the bars from the bottom of the frame, minus the height of the bar. Which means it'll sit at the bottom of the graph.
+
+  });
+
+}
+
+updateChart('clicks.tsv');
+
+</script>
+
+</body>
+</html>

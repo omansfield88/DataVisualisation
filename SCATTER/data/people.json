@@ -1,0 +1,33 @@
+[
+        
+        {
+            "firstName": "David",
+            "age": 10,
+            "income": 10
+        },
+
+        {
+            "firstName": "Lucy",
+            "age": 20,
+            "income": 30
+        },
+
+        {
+            "firstName": "Mwren",
+            "age": 50,
+            "income": 50
+        },
+
+        {
+            "firstName": "Vicky",
+            "age": 70,
+            "income": 70
+        },
+
+        {
+            "firstName": "Rich",
+            "age": 100,
+            "income": 90
+        }
+]
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="d3.min.js"></script>
+  <script src="script.js"></script>
+  <script src="data/people.json"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+    <title>Dashboard</title>
+
+<style>
+
+div{
+  margin: 50px;
+}
+
+svg{
+    background-color: #dddddd;
+}
+
+.box{
+    width:100%;
+}
+
+#graphTitle{
+  font-family: 'Roboto Slab', serif;
+  font-size: 50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+  <p id="graphTitle">January</p>
+</div>
+
+<button onclick="updateChart('data/jan.tsv', 'January')">January</button>
+<button onclick="updateChart('data/feb.tsv', 'February')">February</button>
+<button onclick="updateChart('data/march.tsv', 'March')">March</button>
+
+
+<script>
+
+
+
+function updateChart(file, title){
+
+  document.getElementById('graphTitle').innerHTML = title;
+
+  d3.selectAll("svg").remove();
+
+  currentData = file;
+  d3.tsv(currentData, function(data) {
+
+      var width = 300;
+      var height = 400;
+
+
+      //Scale to fit container
+      var widthScale = d3.scale.linear()
+                         .domain([0, 400])
+                         .range([0, width])
+
+      var heightScale = d3.scale.linear()
+                         .domain([0, 604])
+                         .range([0, height])
+
+
+
+      //Create SVG frame on page and git it width and height
+      var frame = d3.select("div")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .attr("id", function(){return "box";});
+
+
+
+      //Determin width of bars
+      var bars = frame.selectAll("rect")
+                    .data(data)
+                    .enter()
+                      .append("rect")
+                      .attr("width", function(d) {return width / 20})
+                      .attr("height", function(d) {return heightScale(d.clicks);})//d = the value of the data in the array
+                      .attr("x", function (d, i) {return i * width / 12 })//Space the bars out. i = the value's index in the array
+                      .attr("y", height)
+                      .style("fill", "#db2e63");
+                     
+
+      //Animate
+      bars.transition()
+          .duration(1000)    
+           .attr("y", function (d) {return height - heightScale(d.clicks)});//moving the bars from the bottom of the frame, minus the height of the bar. Which means it'll sit at the bottom of the graph.
+
+  });
+
+}
+
+
+
+
+
+
+
+
+//Data values
+// var dataArray = [200, 250, 350, 210, 100, 150, 650, 310];
+
+
+
+</script>
+
+</body>
+
+
+</html>

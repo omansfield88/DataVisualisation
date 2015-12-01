@@ -1,5 +1,4 @@
-[
-        
+[        
         {
             "firstName": "David",
             "age": 10,
@@ -27,7 +26,13 @@
         {
             "firstName": "Rich",
             "age": 100,
-            "income": 90
+            "income":100
+        },
+
+        {
+            "firstName": "Mwren",
+            "age": 140,
+            "income": 240
         }
 ]
 

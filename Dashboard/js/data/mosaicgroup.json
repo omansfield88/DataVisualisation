@@ -1,0 +1,177 @@
+[
+	{
+		"Category" : "A Alpha Territory",
+		"Responders" : 44,
+		"UKPopulation" : 4,
+		"Index" : 93,
+		"Z Score" : -0.5
+	},
+	{
+		"Category" : "B Professional Rewards",
+		"Responders" : 64,
+		"UKPopulation" : 10,
+		"Index" : 60,
+		"Z Score" : -5.4
+	},
+	{
+		"Category" : "C Rural Solitude",
+		"Responders" : 32,
+		"UKPopulation" : 5,
+		"Index" : 60,
+		"Z Score" : -3.9
+	},
+	{
+		"Category" : "D Small Town Diversity",
+		"Responders" : 101,
+		"UKPopulation" : 9,
+		"Index" : 99,
+		"Z Score" : -0.1
+	},
+	{
+		"Category" : "E Active Retirement",
+		"Responders" : 52,
+		"UKPopulation" : 3,
+		"Index" : 137,
+		"Z Score" : 2.0
+	},
+	{
+		"Category" : "F Suburban Mindsets",
+		"Responders" : 119,
+		"UKPopulation" : 11,
+		"Index" : 81,
+		"Z Score" : -2.6
+	},
+	{
+		"Category" : "G Careers and Kids",
+		"Responders" : 59,
+		"UKPopulation" : 5,
+		"Index" : 100,
+		"Z Score" : 0.0
+	},
+	{
+		"Category" : "H New Homemakers",
+		"Responders" : 41,
+		"UKPopulation" : 4,
+		"Index" : 93,
+		"Z Score" : -0.5
+	},
+	{
+		"Category" : "I Ex-Council Community",
+		"Responders" : 124,
+		"UKPopulation" : 11,
+		"Index" : 105,
+		"Z Score" : 0.6
+	},
+	{
+		"Category" : "J Claimant Cultures",
+		"Responders" : 68,
+		"UKPopulation" : 5,
+		"Index" : 136,
+		"Z Score" : 2.2
+	},
+	{
+		"Category" : "K Upper Floor Living",
+		"Responders" : 69,
+		"UKPopulation" : 4,
+		"Index" : 145,
+		"Z Score" : 2.6
+	},
+	{
+		"Category" : "L Elderly Needs",
+		"Responders" : 83,
+		"UKPopulation" : 4,
+		"Index" : 185,
+		"Z Score" : 4.4
+	},
+	{
+		"Category" : "M Industrial Heritage",
+		"Responders" : 105,
+		"UKPopulation" : 7,
+		"Index" : 128,
+		"Z Score" : 2.4
+	},
+	{
+		"Category" : "N Terraced Melting Pot",
+		"Responders" : 80,
+		"UKPopulation" : 7,
+		"Index" : 110,
+		"Z Score" : 0.9
+	},
+	{
+		"Category" : "O Liberal Opinions",
+		"Responders" : 69,
+		"UKPopulation" : 9,
+		"Index" : 70,
+		"Z Score" : -3.6
+	},
+		{
+		"Category" : "F Suburban Mindsets",
+		"Responders" : 119,
+		"UKPopulation" : 11,
+		"Index" : 81,
+		"Z Score" : -2.6
+	},
+	{
+		"Category" : "G Careers and Kids",
+		"Responders" : 59,
+		"UKPopulation" : 5,
+		"Index" : 100,
+		"Z Score" : 0.0
+	},
+	{
+		"Category" : "H New Homemakers",
+		"Responders" : 41,
+		"UKPopulation" : 4,
+		"Index" : 93,
+		"Z Score" : -0.5
+	},
+	{
+		"Category" : "I Ex-Council Community",
+		"Responders" : 124,
+		"UKPopulation" : 11,
+		"Index" : 105,
+		"Z Score" : 0.6
+	},
+	{
+		"Category" : "J Claimant Cultures",
+		"Responders" : 68,
+		"UKPopulation" : 5,
+		"Index" : 136,
+		"Z Score" : 2.2
+	},
+	{
+		"Category" : "K Upper Floor Living",
+		"Responders" : 69,
+		"UKPopulation" : 4,
+		"Index" : 145,
+		"Z Score" : 2.6
+	},
+	{
+		"Category" : "L Elderly Needs",
+		"Responders" : 83,
+		"UKPopulation" : 4,
+		"Index" : 185,
+		"Z Score" : 4.4
+	},
+	{
+		"Category" : "M Industrial Heritage",
+		"Responders" : 105,
+		"UKPopulation" : 7,
+		"Index" : 128,
+		"Z Score" : 2.4
+	},
+	{
+		"Category" : "N Terraced Melting Pot",
+		"Responders" : 80,
+		"UKPopulation" : 7,
+		"Index" : 110,
+		"Z Score" : 0.9
+	},
+	{
+		"Category" : "O Liberal Opinions",
+		"Responders" : 69,
+		"UKPopulation" : 9,
+		"Index" : 70,
+		"Z Score" : -3.6
+	}
+]

@@ -1,7 +1,7 @@
 function createBar(){
 
-	var frameWidth = 300;
-	var frameHeight = 300;
+	var frameWidth = 400;
+	var frameHeight = 400;
 
 	var colours = ["#E18935","#E26635", "#DD443F", "#DB384A", "#DE5234", "#DC3E37"];
 
@@ -10,8 +10,7 @@ function createBar(){
 		
 		var frame = d3.select('#barChart')
 					 .append('svg')
-					 .attr('width', frameWidth)
-	                 .attr('height', frameHeight);
+					 .attr("viewBox", "0 0 400 400")
 
 
 

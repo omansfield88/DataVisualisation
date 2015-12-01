@@ -13,7 +13,7 @@ svg{
 
 h2{
   font-family: 'Roboto Slab', serif;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 #control{
@@ -27,26 +27,18 @@ select{
     background: transparent;
 }
 
-#categories{
-    width: 33%;
-    display: inline-block;
-    vertical-align: top;
-}
-
 li{
     list-style: none;
     font-family: 'Open Sans', sans-serif;
     padding: 0 0 5px 0;
 }
 
-#barChart{
-    width: 33%;
-    display: inline-block;
-    vertical-align: top;
+section{
+    width: 30%;
 }
 
-#pieCharts{
-    width: 33%;
-    display: inline-block; 
-    vertical-align: top;
+
+.layout{
+    display: flex;
+    justify-content: space-between;
 }

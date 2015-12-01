@@ -2,7 +2,7 @@ function createPie1(){
 
 var frameWidth = 400;
 var frameHeight = 400;
-var radius = 150;
+var radius = frameWidth / 2;
 var colours = ["#E18935", "#E26635", "#DD443F", "#DB384A", "#DE5234", "#DC3E37"];
 
 d3.json('js/data/ageband.json', function(data){
@@ -17,10 +17,11 @@ d3.json('js/data/ageband.json', function(data){
 
     var myChart = d3.select('#pieChart1')
                     .append('svg')
-                    .attr('width', frameWidth)
-                    .attr('height', frameHeight)
+                    .attr("viewBox", "0 0 400 400")
+                    // .attr('width', frameWidth)
+                    // .attr('height', frameHeight)
                     .append('g')
-                        .attr('transform', 'translate('+(frameWidth-radius*1.5 )+','+(frameHeight-radius*1.5 )+')')
+                        .attr('transform', 'translate('+(frameWidth-radius )+','+(frameHeight-radius )+')')
                         .selectAll('path').data(pie(data))
                         .enter()
                         .append('path')

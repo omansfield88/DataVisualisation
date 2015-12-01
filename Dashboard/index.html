@@ -15,7 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    <title>David and Quince</title>
+    <title>The Dashboard</title>
 
 
 </head>
@@ -24,25 +24,29 @@
 
 <div id="container">
 
-    <section id="control">
+   <!--  <section id="control">
         <select>
             <option value="ageband">Age Band</option>
         </select>
-    </section>
+    </section> -->
 
-    <section id="categories">
-        <ul id="categoryUL">
-         
-        </ul>
-    </section>
+    <div class="layout">
+        <section id="categories">
+            <h2>Customer Group</h2>
+            <ul id="categoryUL">         
+            </ul>
+        </section>
 
-    <section id="barChart">
-    <h2>Z Score</h2>
-    </section>
+        <section id="ZScores">
+            <h2>Z Score</h2>
+            <div id="barChart"></div>        
+        </section>
 
-    <section id="pieCharts">
-        <div id="pieChart1"></div>
-    </section>
+        <section id="pieCharts">
+            <h2>UK Population</h2>
+            <div id="pieChart1"></div>
+        </section>
+    </div>
 
 </div>
 

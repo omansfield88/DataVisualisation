@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+  font-family: 'Roboto Slab', serif;
+  font-size: 40px;
+}
+
+li{
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 0 5px 0;
+}
+
+select{
+    font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    border: none;
+    background: transparent;
+}
+
+
+
+.layout{
+    display: flex;
+    justify-content: space-between;
+}
+
+#container{
+    padding: 170px;
+}
+
+
+#control{
+    display: block;
+}
+
+section{
+    width: 30%;
+}
+

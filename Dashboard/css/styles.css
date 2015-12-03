@@ -1,44 +1,33 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+* {
+  margin: 0;
+  padding: 0; }
 
-svg{
-    background-color: #cccccc;
-}
-
-#container{
-    padding: 50px;
-}
-
-h2{
+h2 {
   font-family: 'Roboto Slab', serif;
-  font-size: 40px;
-}
+  font-size: 40px; }
 
-#control{
-    display: block;
-}
+li {
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 0 5px 0; }
 
-select{
-    font-family: 'Roboto Slab', serif;
-    font-size: 50px;
-    border: none;
-    background: transparent;
-}
+select {
+  font-family: 'Roboto Slab', serif;
+  font-size: 50px;
+  border: none;
+  background: transparent; }
 
-li{
-    list-style: none;
-    font-family: 'Open Sans', sans-serif;
-    padding: 0 0 5px 0;
-}
+.layout {
+  display: flex;
+  justify-content: space-between; }
 
-section{
-    width: 30%;
-}
+#container {
+  padding: 170px; }
 
+#control {
+  display: block; }
 
-.layout{
-    display: flex;
-    justify-content: space-between;
-}
+section {
+  width: 30%; }
+
+/*# sourceMappingURL=styles.css.map */

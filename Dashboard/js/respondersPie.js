@@ -1,4 +1,4 @@
-function createPie1(){
+function createPie2(){
 
 var frameWidth = 200;
 var frameHeight = 200;
@@ -9,13 +9,13 @@ d3.json('js/data/ageband.json', function(data){
 
     var pie = d3.layout.pie()
                 .value(function(d){
-                    return d.UKPopulation;
+                    return d.Responders;
                 })
 
     var arc = d3.svg.arc()
                 .outerRadius(radius)
 
-    var myChart = d3.select('#pieChart1')
+    var myChart = d3.select('#pieChart2')
                     .append('svg')
                     .attr("viewBox", "0 0 " + frameWidth + " " + frameHeight) 
                     // .attr('width', frameWidth)
@@ -34,4 +34,4 @@ d3.json('js/data/ageband.json', function(data){
 
 }
 
-createPie1();
+createPie2();

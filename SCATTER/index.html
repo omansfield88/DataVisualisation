@@ -38,9 +38,10 @@ svg{
 <body>
 
 
-<div></div>
-
+<div id="first"></div>
 <script>
+
+function first(){
 
 var frameWidth = 200;
 var frameHeight = 200;
@@ -56,7 +57,7 @@ var colours = ["red", "green", "purple", "orange", "blue"]
 d3.json('data/people.json', function(data){
 
     //Create frame to draw SVG stuff in
-    var frame = d3.select('div')
+    var frame = d3.select('#first')
             .append('svg')
             .attr('width', frameWidth)
             .attr('height', frameHeight)
@@ -135,8 +136,105 @@ d3.json('data/people.json', function(data){
       
 });
 
+}
+
+function second() {
+
+d3.json('data/people.json', function(data){
+
+    var frameWidth = 200;
+var frameHeight = 200;
+
+var rectWidth = 10;
+var rectHeight = 10;
+
+var colours = ["red", "green", "purple", "orange", "blue"]
 
 
+    //Create frame to draw SVG stuff in
+    var frame = d3.select('#second')
+            .append('svg')
+            .attr('width', frameWidth)
+            .attr('height', frameHeight)
+
+
+
+    //Pull in the data from the specified URL, then pushes it to arrays which can be read by the drawing code
+    var currentDataAge = [];    
+    for (i = 0; i < data.length; i++){
+        currentDataAge.push(data[i].age)
+    };
+    var currentDataIncome = [];
+    for (i = 0; i < data.length; i++){
+        currentDataIncome.push(data[i].income)
+    };
+
+
+
+    //Create scale vars that are used in place of data values.
+    var yScale = d3.scale.linear(data)
+                    .domain([0, d3.max(currentDataIncome)])
+                    .range([0, frameHeight]);
+
+    var xScale = d3.scale.linear(data)
+                    .domain([0, d3.max(currentDataAge)])
+                    .range([0, frameWidth]);
+
+    var yScaleAxis = d3.scale.linear(data)
+                    .domain([0, d3.max(currentDataIncome)])
+                    .range([frameHeight, 0]);
+
+
+
+
+    //Creates x and y axis
+    var xAxis = d3.svg.axis()
+                .scale(xScale)
+                
+
+    var yAxis = d3.svg.axis()
+                .scale(yScaleAxis)
+                .orient('left');
+
+    //Creates a string 'translate(0, frameHeight)' which can be used as an attr argument. The creats the axis on the page.   
+    var translateFrameHeight = "translate(0, " + frameHeight + ")"  ;
+    frame.append('g')
+            .attr('transform', translateFrameHeight)
+            .attr('font-family', 'sans-serif')
+            .call(xAxis);
+
+    var translateFrameWidth = "translate(0, " + frameWidth + ")"  ;
+    frame.append('g')
+            .attr('font-family', 'sans-serif')         
+            .call(yAxis);
+
+
+
+
+
+    //Draws the SVG points on the frame according to the data being fed in, augmented by the scale
+    var points = frame.selectAll('rect')
+                    .data(data)
+                    .enter()
+                        .append("rect")
+                        .attr('width', rectWidth)
+                        .attr('height', rectHeight)
+                        .attr('x', function(d){
+                          return xScale(d.age);
+                        })
+                        .attr('y', function(d){
+                          return frameHeight - yScale(d.income);
+                        })
+                        .style("fill", function(d, i){
+                            return colours[i];
+                        });
+      
+});
+
+}
+
+first();
+second();
 
 </script>
 

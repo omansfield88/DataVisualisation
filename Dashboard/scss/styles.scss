@@ -3,9 +3,13 @@
     padding: 0;
 }
 
+body{
+    font-size: 100%;
+}
+
 h2{
   font-family: 'Roboto Slab', serif;
-  font-size: 40px;
+  font-size: 1.5em;
 }
 
 li{
@@ -16,28 +20,37 @@ li{
 
 select{
     font-family: 'Roboto Slab', serif;
-    font-size: 50px;
+    font-size: 2em;
     border: none;
     background: transparent;
 }
 
+#outerContainer{
+    margin: 50px 100px 50px 100px;
+    padding: 20px;
+    background-color: #dddddd;
+}
 
-
-.layout{
+#graphContainer{
     display: flex;
     justify-content: space-between;
+
+    section{
+        width: 30%;
+    }
+
+    .pieChart{
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
-#container{
-    padding: 170px;
-}
+
 
 
 #control{
     display: block;
 }
 
-section{
-    width: 30%;
-}
+
 

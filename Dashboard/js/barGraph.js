@@ -21,9 +21,17 @@ function createBar(){
        		zScoresArray.push(data[i].ZScore)
     	};
 
-    	//Create xScale to use with horizontal sizing
+    	//Turn all zScores into all positive intergers. -19 becomes 19.
+    	var zScoresAllPositive = [];
+    	for (i = 0; i < data.length; i++){
+       		zScoresAllPositive.push(Math.abs((data[i].ZScore)))
+    	};
+
+        //Create xScale to use with horizontal sizing.
+        //Have to use zScoresAllPositive otherwise the graph is off.
+        // -19 could be the longest bar, but 8 would still be larger so would be considered the 'max'.
     	var xScale = d3.scale.linear(data)
-                    .domain([0, d3.max(zScoresArray)])
+                    .domain([0, d3.max(zScoresAllPositive)])
                     .range([0, frameWidth]);
 
         //DRAWING CODE.
@@ -52,12 +60,9 @@ function createBar(){
 	    					.attr('y', function(d,i){
 	    						return i * 30;
 	    					})
-	    					.attr('fill', function(d, i){
+							.attr('fill', function(d, i){
                                 return colours[i];
                             })
-
-
-
 
 	});
 

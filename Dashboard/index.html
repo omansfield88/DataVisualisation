@@ -23,32 +23,35 @@
 
 <body>
 
-<div id="container">
+<div id="outerContainer">
 
-   <!--  <section id="control">
+    <section id="control">
         <select>
             <option value="ageband">Age Band</option>
+            <option value="mosaicgroup">Mosaic Group</option>
         </select>
-    </section> -->
+    </section>
 
-    <div class="layout">
+    <div id="graphContainer">       
         <section id="categories">
             <h2>Customer Group</h2>
             <ul id="categoryUL">         
             </ul>
         </section>
-
         <section id="ZScores">
             <h2>Z Score</h2>
             <div id="barChart"></div>
         </section>
-
         <section id="pieCharts">
-            <h2>UK Population</h2>
-            <div id="pieChart1"></div>
-            <h2>Responders</h2>
-            <div id="pieChart2"></div>
-        </section>
+            <div class="pieChart">
+                <h2>UK Population</h2>
+                <div id="pieChart1"></div>
+            </div> 
+            <div class="pieChart">
+                <h2>Responders</h2>
+                <div id="pieChart2"></div>
+            </div>
+        </section>       
     </div>
 
 </div>

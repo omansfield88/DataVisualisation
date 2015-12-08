@@ -4,41 +4,41 @@
 		"Responders" : 158,
 		"UKPopulation" : 52,
 		"Index" :  40,
-		"ZScore" : -19
+		"ZScore" : -15
 	},
 	{
 		"Category" : "Aged 26-35",
 		"Responders" : 287,
 		"UKPopulation" : 18,
 		"Index" : 50,
-		"ZScore" : -18
+		"ZScore" : -10
 	},
 	{
 		"Category" : "Aged 36-45",
 		"Responders" : 534,
 		"UKPopulation" : 21,
 		"Index" :  83,
-		"ZScore" : -5.2
+		"ZScore" : -5
 	},
 	{
 		"Category" : "Aged 46-55",
 		"Responders" : 755,
 		"UKPopulation" : 18,
 		"Index" : 133,
-		"ZScore" : 7.7
+		"ZScore" : 0
 	},
 	{
 		"Category" : "Aged 56-65",
 		"Responders" : 590,
 		"UKPopulation" : 15,
 		"Index" : 129,
-		"ZScore" : 6.1
+		"ZScore" : 5
 	},
 	{
 		"Category" : "Aged 66+",
 		"Responders" : 811,
 		"UKPopulation" : 16,
 		"Index" : 163,
-		"ZScore" : 12.8
+		"ZScore" : 10
 	}
 ]

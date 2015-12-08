@@ -42,14 +42,7 @@ function createBar(){
 	    					.append('rect')
 	    					.attr('width', 0)
 	    					.attr('height', 20)
-	    					.attr('x' , function (d, i){
-	    						if (zScoresArray[i] < 0) {
-	    							return frameWidth / 2 - xScale(Math.abs(zScoresArray[i])) /2;
-	    						}
-	    						else {
-	    							return frameWidth / 2;
-	    						}
-	    					})
+	    					.attr('x' , 200)
 	    					.attr('y', function(d,i){
 	    						return i * 30;
 	    					})
@@ -58,19 +51,26 @@ function createBar(){
                             })
 
 
-        //Animate
-      bars.transition()
-          .duration(1000)    
-		       .attr('width', function(d, i){
-					if (zScoresArray[i] < 0){  						
-						return xScale(Math.abs(zScoresArray[i])) /2;
-					}
-					else {
-						return xScale(zScoresArray[i]) /2;
-					}
-				})
-           //moving the bars from the bottom of the frame, minus the height of the bar.
-           //Which means it'll sit at the bottom of the graph.
+        //ANIMATE
+        //200 is the middle point which bars grow from.
+        //If the ZScore is less than 0, the x value must be moved to the left.
+        //For negative ZScores, the width and x value must be animated at the same time to create the illusion that it is growing from the midpoint. 
+			bars.transition()
+        			.duration(1000)
+        			.attr('width', function(d, i){        			
+        				return xScale(Math.abs(data[i].ZScore)) /2;
+        				     				
+        			})
+        			.attr('x', function(d, i){
+        				if (data[i].ZScore > 0){
+        					return 200; //Positive ZScores start from the midpoint of the graph (200)
+        				}
+        				else if (data[i].ZScore < 0){
+        					return 200 - xScale(Math.abs(data[i].ZScore)) /2; //Negative ZScores must have their start point moved left by the same amount as their width.
+        				}
+        			})
+
+
 
 	});
 

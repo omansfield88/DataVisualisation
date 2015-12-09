@@ -1,5 +1,8 @@
 function createBar(currentData){
 
+    //Remove all SVG elements first so they're not left on the page
+    d3.selectAll("svg").remove();
+
 	var frameWidth = 400;
 	var frameHeight = 400;
 

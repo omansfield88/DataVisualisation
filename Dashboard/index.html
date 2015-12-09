@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/styles.css" type='text/css'>
 
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100,300,500,700italic,500italic' rel='stylesheet' type='text/css'>
 
     <title>The Dashboard</title>
 
@@ -28,46 +28,63 @@
 
     <header>
         <h1>David &amp; Quince</h1>
+        <span>Responders Dashboard</span>
+        <img src="img/amazeone_logo.png" width="200">
     </header>
 
-
-
     <section id="control">
-        <select>
-            <option value="ageband">Age Band</option>
-            <option value="mosaicgroup">Mosaic Group</option>
+        <select onchange="changeFunc(value);">
+            <option>Select data set</option>
+            <option value="js/data/ageband.json">Age Band</option>
+            <option value="js/data/gender.json">Gender</option>
+            <option value="js/data/mosaicgroup.json">Mosaic Group</option>
         </select>
-    </section>
+    </section>   
 
-    <div id="graphContainer">  
+    <div id="sidebar">
         <section id="categories">
             <h2>Customer Group</h2>
-            <ul id="categoryUL">         
-            </ul>
+            <ul id="categoryUL"></ul>
+        </section>
+    </div>
+<!-- 
+     <div id="highlight">
+        <h2>Aged 66+</h2>
+    </div> -->
+
+    <div id="graphsContainer">
+        <section id="pieCharts">
+            <div class="pieChart">
+                <h2>Responders</h2>
+                <div id="UKPopulationPie"></div>
+            </div>
+            <div class="pieChart">
+                <h2>UK Population</h2>
+                <div id="RespondersPie"></div>
+            </div>            
         </section>
         <section id="ZScores">
             <h2>Z Score</h2>
             <div id="barChart"></div>
         </section>
-        <section id="pieCharts">
-            <div class="pieChart">
-                <h2>UK Population</h2>
-                <div id="pieChart1"></div>
-            </div> 
-            <div class="pieChart">
-                <h2>Responders</h2>
-                <div id="pieChart2"></div>
-            </div>
-        </section>       
     </div>
 
 </div>
 
 <script>
-createList('js/data/mosaicgroup.json');
-createBar('js/data/mosaicgroup.json');
-createPie1('js/data/mosaicgroup.json');
-createPie2('js/data/mosaicgroup.json');
+
+function changeFunc(thing) {
+    createList(thing);
+    createBar(thing);
+    createRespondersPie(thing);
+    createUKPopulationPie(thing);
+}
+
+createList('js/data/ageband.json');
+createBar('js/data/ageband.json');
+createRespondersPie('js/data/ageband.json');
+createUKPopulationPie('js/data/ageband.json');
+
 
 
 

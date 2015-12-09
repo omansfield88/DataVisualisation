@@ -3,10 +3,13 @@
     padding: 0;
 }
 
-body{
+html{
     font-size: 100%;
 }
 
+
+//TYPOGRAPHY//
+//////////////
 h1{
   font-family: 'Roboto Slab', serif;
   font-size: 3em;
@@ -15,50 +18,93 @@ h1{
 h2{
   font-family: 'Roboto Slab', serif;
   font-size: 1.5em;
+  padding: 20px 0;
 }
 
 li{
     list-style: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0 0 5px 0;
 }
 
 select{
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2em;
     border: none;
-    background: transparent;
+    background: #c1c1c1;
 }
 
+//LAYOUT//
+//////////
 #outerContainer{
-    margin: 50px 100px 50px 100px;
-    padding: 20px;
-    background-color: #dddddd;
+    margin: 20px;    
 }
 
-#graphContainer{
-    display: flex;
-    justify-content: space-between;
+header{
+    margin: 0 0 20px 0;
+    position: relative;
+    
+    span{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.3em;        
+    }
+    img{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+#sidebar{
+    display: inline-block;
+    background-color: #cccccc;
+    vertical-align: top;
+    width: 20%;
+    margin: 0 20px 0 0;
+    padding: 0 20px 0 20px;
+
+}
+
+#highlight{
+    background-color: #cccccc;
+    padding: 20px;
+    width: 60%;
+}
+
+#graphsContainer{
+    display: inline-block;
+    width: 75%;
+    background-color: #dddddd;
+
+    #pieCharts{
+        padding: 0 20px;
+    }
+
+    #ZScores{
+        padding: 0 20px;
+    }
 
     section{
-        width: 30%;
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
     }
 
     .pieChart{
-        width: 50%;
+        width: 49%;
+        display: inline-block;
         margin: 0 auto;
     }
 }
 
 svg{
-    background-color: #c1c1c1;
+    // background-color: #c1c1c1;
 }
-
-
 
 #control{
     display: block;
 }
 
-
-
+select{
+    padding: 5px 10px;
+}

@@ -1,11 +1,10 @@
-function createPie2(){
+function createPie2(currentData){
 
 var frameWidth = 200;
 var frameHeight = 200;
 var radius = frameWidth / 2;
-var colours = ["#E18935", "#E26635", "#DD443F", "#DB384A", "#DE5234", "#DC3E37"];
 
-d3.json('js/data/ageband.json', function(data){
+d3.json(currentData, function(data){
 
     var pie = d3.layout.pie()
                 .value(function(d){
@@ -34,4 +33,3 @@ d3.json('js/data/ageband.json', function(data){
 
 }
 
-createPie2();

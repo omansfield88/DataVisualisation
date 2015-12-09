@@ -1,11 +1,9 @@
-function createBar(){
+function createBar(currentData){
 
 	var frameWidth = 400;
 	var frameHeight = 400;
 
-	var colours = ["#E18935","#E26635", "#DD443F", "#DB384A", "#DE5234", "#DC3E37"];
-
-	d3.json('js/data/ageband.json', function(data){
+	d3.json(currentData, function(data){
 
 		
 		var frame = d3.select('#barChart')
@@ -76,4 +74,3 @@ function createBar(){
 
 }
 
-createBar();

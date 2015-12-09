@@ -5,6 +5,10 @@
 body {
   font-size: 100%; }
 
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em; }
+
 h2 {
   font-family: 'Roboto Slab', serif;
   font-size: 1.5em; }
@@ -33,6 +37,9 @@ select {
   #graphContainer .pieChart {
     width: 50%;
     margin: 0 auto; }
+
+svg {
+  background-color: #c1c1c1; }
 
 #control {
   display: block; }

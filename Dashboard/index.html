@@ -10,6 +10,7 @@
     <script src="js/populationPie.js"></script>
     <script src="js/respondersPie.js"></script>
     <script src="js/barGraph.js"></script>
+    <script src="js/colours.js"></script>
 
     <link rel="stylesheet" href="css/styles.css" type='text/css'>
 
@@ -25,6 +26,12 @@
 
 <div id="outerContainer">
 
+    <header>
+        <h1>David &amp; Quince</h1>
+    </header>
+
+
+
     <section id="control">
         <select>
             <option value="ageband">Age Band</option>
@@ -32,7 +39,7 @@
         </select>
     </section>
 
-    <div id="graphContainer">       
+    <div id="graphContainer">  
         <section id="categories">
             <h2>Customer Group</h2>
             <ul id="categoryUL">         
@@ -57,6 +64,11 @@
 </div>
 
 <script>
+createList('js/data/mosaicgroup.json');
+createBar('js/data/mosaicgroup.json');
+createPie1('js/data/mosaicgroup.json');
+createPie2('js/data/mosaicgroup.json');
+
 
 
 // for (i=0; i<categoryData.length; i++){

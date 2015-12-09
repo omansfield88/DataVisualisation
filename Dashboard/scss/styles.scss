@@ -7,6 +7,11 @@ body{
     font-size: 100%;
 }
 
+h1{
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em;
+}
+
 h2{
   font-family: 'Roboto Slab', serif;
   font-size: 1.5em;
@@ -45,6 +50,9 @@ select{
     }
 }
 
+svg{
+    background-color: #c1c1c1;
+}
 
 
 

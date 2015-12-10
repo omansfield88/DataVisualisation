@@ -22,7 +22,7 @@ function createRespondersPie(currentData){
               // Create the pie chart layout
               var pie = d3.layout.pie()
                 .value(function(d) {
-                  return d.UKPopulation;
+                  return d.Responders;
                 })
                 .sort(null); // Sort is set to null to allow for better looking tweens
 

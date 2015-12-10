@@ -7,10 +7,10 @@
     <script src="d3.min.js"></script>
 
     <script src="js/listItems.js"></script>
+    <script src="js/mainresponder.js"></script>
     <script src="js/populationPie.js"></script>
     <script src="js/respondersPie.js"></script>
     <script src="js/barGraph.js"></script>
-     <script src="js/pie.js"></script>
     <script src="js/colours.js"></script>
 
     <link rel="stylesheet" href="css/styles.css" type='text/css'>
@@ -34,8 +34,8 @@
     </header>
 
     <section id="control">
-        <select onchange="changeFunc(value);">
-            <option>Select data set</option>
+        <select onchange="loadData(value);">
+            <!-- <option>Select data set</option> -->
             <option value="js/data/ageband.json">Age Band</option>
             <option value="js/data/gender.json">Gender</option>
             <option value="js/data/mosaicgroup.json">Mosaic Group</option>
@@ -48,26 +48,43 @@
             <ul id="categoryUL"></ul>
         </section>
     </div>
-<!-- 
-     <div id="highlight">
-        <h2>Aged 66+</h2>
-    </div> -->
 
-    <div id="graphsContainer">
-        <section id="pieCharts">
-            <div class="pieChart">
-                <h2>Responders</h2>
-                <div id="RespondersPie"></div>
+
+    <div id="main">
+        <div id="highlight">
+
+            <div id="text">
+                <span>
+                    Main Responders were
+                </span>
+                <div id="mainCategory">
+                </div>
+                <div id="mainResponder">     
+                </div>
             </div>
-            <div class="pieChart">
-                <h2>UK Population</h2>                
-                <div id="UKPopulationPie"></div>
-            </div>            
-        </section>
-        <section id="ZScores">
-            <h2>Z Score</h2>
-            <div id="barChart"></div>
-        </section>
+
+            <div id="highlightGraphs">
+
+            </div>
+
+        </div>
+
+        <div id="graphsContainer">
+            <section id="pieCharts">
+                <div class="pieChart">
+                    <h2>Responders</h2>
+                    <div id="RespondersPie"></div>
+                </div>
+                <div class="pieChart">
+                    <h2>UK Population</h2>                
+                    <div id="UKPopulationPie"></div>
+                </div>       
+            </section>
+            <section id="ZScores">
+                <h2>Z Score</h2>
+                <div id="barChart"></div>
+            </section>
+        </div>
     </div>
 
 </div>
@@ -76,17 +93,19 @@
 
 <script>
 
-function changeFunc(thing) {
-    createList(thing);
-    createBar(thing);
-    createRespondersPie(thing);
-    createUKPopulationPie(thing);
+function loadData(jsonData) {
+    createList(jsonData);
+    createBar(jsonData);
+    createRespondersPie(jsonData);
+    createUKPopulationPie(jsonData);
+    createMainResponder(jsonData);
 }
 
 createList('js/data/ageband.json');
 createBar('js/data/ageband.json');
 createRespondersPie('js/data/ageband.json');
 createUKPopulationPie('js/data/ageband.json');
+createMainResponder('js/data/ageband.json');
 
 
 

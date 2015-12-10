@@ -11,7 +11,7 @@ function createBar(currentData){
 		
 		var frame = d3.select('#barChart')
 					 .append('svg')
-					 .attr("viewBox", "0 0 400 400")
+					 .attr("viewBox", "0 0 400 450")
 
 
 

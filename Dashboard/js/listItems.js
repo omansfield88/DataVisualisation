@@ -12,6 +12,9 @@ function createList(currentData){
 	                        .text(function (d){
 	                            return d.Category;
 	                        })
+	                        .style('color', function(d, i){
+	                        	return colours[i];
+	                        })
 
 	});
 };

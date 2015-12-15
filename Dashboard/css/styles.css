@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 html {
   font-size: 100%; }
@@ -11,25 +12,29 @@ h1 {
 
 h2 {
   font-family: 'Roboto Slab', serif;
-  font-size: 1.5em;
+  font-size: 28px;
   padding: 20px 0; }
 
 li {
   list-style: none;
   font-family: 'Roboto', sans-serif;
-  padding: 0 0 5px 0; }
+  padding: 0 0 5px 0;
+  font-size: 26px; }
 
 select {
   font-family: 'Roboto', sans-serif;
   font-size: 2em;
-  border: none;
-  background: #c1c1c1; }
+  border-top: 1px solid black;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 5px 10px; }
 
 #outerContainer {
   margin: 20px; }
 
 header {
-  margin: 0 0 20px 0;
+  margin: 0 0 80px 0;
   position: relative; }
   header span {
     font-family: 'Roboto', sans-serif;
@@ -41,7 +46,6 @@ header {
 
 #sidebar {
   display: inline-block;
-  background-color: #cccccc;
   vertical-align: top;
   width: 20%;
   margin: 0 20px 0 0;
@@ -52,41 +56,55 @@ header {
   width: 75%; }
 
 #highlight {
-  background-color: #cccccc;
   padding: 20px;
   margin: 0 0 20px 0;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+  #highlight #text {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300; }
   #highlight p {
     display: inline-block;
-    font-size: 2em; }
+    font-size: 1.4em; }
   #highlight span {
-    display: inline-block;
-    font-size: 2em; }
-  #highlight h2 {
-    padding: 0;
-    font-size: 0.8em; }
+    display: inline-block; }
+    #highlight span h2 {
+      padding: 0;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400; }
+  #highlight #highlightGraphs {
+    width: 30%;
+    display: inline-block; }
+  #highlight #highlightRespondersPie {
+    width: 60%;
+    margin: 0 auto; }
 
 #graphsContainer {
   display: inline-block;
-  background-color: #dddddd;
-  width: 100%; }
+  width: 100%;
+  font-size: 0; }
+  #graphsContainer h2 {
+    text-align: center; }
   #graphsContainer #pieCharts {
-    padding: 0 20px; }
+    margin: 0 20px 0 0;
+    display: inline-block;
+    width: 49%; }
+    #graphsContainer #pieCharts .pieChart {
+      width: 50%;
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0 10px; }
   #graphsContainer #ZScores {
-    padding: 0 20px; }
-  #graphsContainer section {
-    width: 45%;
-    display: inline-block;
-    vertical-align: top; }
-  #graphsContainer .pieChart {
+    vertical-align: top;
     width: 49%;
-    display: inline-block;
-    margin: 0 auto; }
+    display: inline-block; }
 
 #control {
   display: block; }
-
-select {
-  padding: 5px 10px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -7,9 +7,10 @@
     <script src="d3.min.js"></script>
 
     <script src="js/listItems.js"></script>
-    <script src="js/mainresponder.js"></script>
+    <script src="js/highlightText.js"></script>
     <script src="js/populationPie.js"></script>
     <script src="js/respondersPie.js"></script>
+    <script src="js/highlightRespondersPie.js"></script>
     <script src="js/barGraph.js"></script>
     <script src="js/colours.js"></script>
 
@@ -34,15 +35,16 @@
     </header>
 
     <section id="control">
+        
+    </section>   
+
+    <div id="sidebar">
         <select onchange="loadData(value);">
             <!-- <option>Select data set</option> -->
             <option value="js/data/ageband.json">Age Band</option>
             <option value="js/data/gender.json">Gender</option>
             <option value="js/data/mosaicgroup.json">Mosaic Group</option>
         </select>
-    </section>   
-
-    <div id="sidebar">
         <section id="categories">
             <h2>Customer Group</h2>
             <ul id="categoryUL"></ul>
@@ -53,12 +55,14 @@
     <div id="main">
         <div id="highlight">
             <div id="text">
-                <p>The main responders were &nbsp;<span id="mainCategory"></span>&nbsp;who responded &nbsp;<span id="mainResponder"></span>&nbsp;times.</p>
-                <p>That makes them &nbsp; <span id="mainRPercentage"></span>
+                <p>THE MAIN RESPONDERS WERE <span id="mainCategory"></span> WHO RESPONDED <span id="mainResponder"></span> TIMES.</p>
+                <p>THAT MAKES THEM <span id="mainRPercentage"></span> OF THE RESPONDERS.<br>WHICH IS REPRESENTATIVE OF <span id="totalPopulation"></span> OF THE TOTAL UK POPULATION</p>
             </div>
 
-            <div id="highlightGraphs">
-            </div>
+    <!--         <div id="highlightGraphs">
+                <div id="highlightRespondersPie">
+                </div>
+            </div> -->
         </div>
 
         <div id="graphsContainer">
@@ -90,14 +94,16 @@ function loadData(jsonData) {
     createBar(jsonData);
     createRespondersPie(jsonData);
     createUKPopulationPie(jsonData);
-    createMainResponder(jsonData);
+    createHighlight(jsonData);
+    createhighlightRespondersPie(jsonData);
 }
 
 createList('js/data/ageband.json');
 createBar('js/data/ageband.json');
 createRespondersPie('js/data/ageband.json');
 createUKPopulationPie('js/data/ageband.json');
-createMainResponder('js/data/ageband.json');
+createHighlight('js/data/ageband.json');
+createhighlightRespondersPie('js/data/ageband.json');
 
 
 

@@ -1,4 +1,4 @@
-function createMainResponder(currentData){
+function createHighlight(currentData){
 	d3.json(currentData, function(data){
 
 
@@ -11,12 +11,19 @@ function createMainResponder(currentData){
        		respondersArray.push(data[i].Responders)
     	};
 
-    	console.log(respondersArray);
+      var sumResponders = 0;
+      for(i=0; i<respondersArray.length; i++){
+          sumResponders = sumResponders + respondersArray[i];
+      }
+
+
+      console.log(respondersArray);
+    	console.log(sumResponders);
 
     	//Get the largest interger value
     	var biggest = d3.max(respondersArray);
     	//Get the index number of that largest value
-		var biggestIndex = (respondersArray.indexOf(biggest))
+		  var biggestIndex = (respondersArray.indexOf(biggest))
 
 	    d3.select('#mainResponder')
 	           .data(data)
@@ -38,17 +45,27 @@ function createMainResponder(currentData){
                     return colours[i];
                 })
 
-		d3.select('#mainRPercentage')
+  		d3.select('#mainRPercentage')
+                 .data(data)
+                 .append('h2')
+                 .attr('class', 'addedText')
+                 .text(function(d,i){
+                 		return Math.round(data[biggestIndex].Responders / sumResponders * 100) + "%"; 
+                 })
+                  .style('color', function(d, i){
+                      return colours[i];
+                  })
+	   
+       d3.select('#totalPopulation')
                .data(data)
                .append('h2')
                .attr('class', 'addedText')
-               .text(function(d,i){
-               		return data[biggestIndex].Responders; //Look for the index of the largest value and find the Category
-               })
+                .text(function(d,i){
+                    return data[biggestIndex].UKPopulation + "%"; 
+                 })
                 .style('color', function(d, i){
                     return colours[i];
                 })
-	                    
 		
 	});
 

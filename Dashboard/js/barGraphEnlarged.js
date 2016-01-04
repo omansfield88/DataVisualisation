@@ -1,4 +1,4 @@
-function createBar(currentData){
+function createBarEnlarged(currentData){
 
     //Remove all SVG elements first so they're not left on the page
     d3.selectAll("svg").remove();
@@ -9,7 +9,7 @@ function createBar(currentData){
 	d3.json(currentData, function(data){
 
 		
-		var frame = d3.select('.barChart')
+		var frame = d3.select('#barChartEnlarged')
 					 .append('svg')
 					 .attr("viewBox", "0 0 400 450")
 

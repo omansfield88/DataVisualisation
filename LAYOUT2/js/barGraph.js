@@ -1,7 +1,7 @@
 function createBar(currentData){
 
     //Remove all SVG elements first so they're not left on the page
-    d3.selectAll("svg").remove();
+    d3.selectAll(".leftSVG").remove();
 
 	var frameWidth = 400;
 	var frameHeight = 400;
@@ -9,8 +9,9 @@ function createBar(currentData){
 	d3.json(currentData, function(data){
 
 		
-		var frame = d3.select('.barChart')
+		var frame = d3.select('#barChart')
 					 .append('svg')
+                     .attr('class','leftSVG')
 					 .attr("viewBox", "0 0 400 450")
 
 

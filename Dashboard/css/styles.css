@@ -33,6 +33,54 @@ select {
 #outerContainer {
   margin: 20px; }
 
+#overlay {
+  background-color: #fff;
+  opacity: 0.2;
+  height: 100%;
+  width: 99%;
+  position: absolute;
+  display: none;
+  z-index: 10; }
+
+#enlarge {
+  width: 40%;
+  background-color: #f1f1f1;
+  position: absolute;
+  top: 20px;
+  left: 30%;
+  z-index: 11;
+  display: none;
+  height: 0px;
+  padding: 0 20px;
+  text-align: center;
+  border: 1px solid black; }
+
+#enlarge2 {
+  width: 40%;
+  background-color: #f1f1f1;
+  position: absolute;
+  top: 20px;
+  left: 30%;
+  z-index: 11;
+  display: none;
+  height: 0px;
+  padding: 0 20px;
+  text-align: center;
+  border: 1px solid black; }
+
+#enlarge3 {
+  width: 80%;
+  background-color: #f1f1f1;
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  z-index: 11;
+  display: none;
+  height: 0px;
+  padding: 0 20px;
+  text-align: center;
+  border: 1px solid black; }
+
 header {
   margin: 0 0 80px 0;
   position: relative; }
@@ -99,7 +147,7 @@ header {
       display: inline-block;
       margin: 0 auto;
       padding: 0 10px; }
-  #graphsContainer #ZScores {
+  #graphsContainer .ZScores {
     vertical-align: top;
     width: 49%;
     display: inline-block; }

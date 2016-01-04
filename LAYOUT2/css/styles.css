@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%; }
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em; }
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 28px;
+  padding: 20px 0; }
+
+li {
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 0 5px 0;
+  font-size: 16px; }
+
+select {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  border-top: 1px solid black;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 5px 10px; }
+
+#outerContainer {
+  margin: 20px; }
+
+#left {
+  width: 49%;
+  display: inline-block;
+  background-color: #f1f1f1;
+  padding: 20px; }
+
+#right {
+  width: 49%;
+  display: inline-block;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 0 0 0 20px; }
+
+header {
+  margin: 0 0 80px 0;
+  position: relative; }
+  header span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em; }
+  header img {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+#sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  margin: 0 20px 0 0;
+  padding: 0 20px 0 20px; }
+
+#main {
+  display: inline-block;
+  width: 75%; }
+
+#graphsContainer {
+  display: inline-block;
+  width: 70%;
+  font-size: 0; }
+  #graphsContainer h2 {
+    text-align: center; }
+  #graphsContainer #pieCharts {
+    margin: 0 20px 0 0;
+    display: inline-block;
+    width: 100%; }
+    #graphsContainer #pieCharts .pieChart {
+      width: 50%;
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0 10px; }
+  #graphsContainer #ZScores {
+    vertical-align: top;
+    width: 100%;
+    display: inline-block;
+    margin: 20px 0 0 0; }
+
+#control {
+  display: block; }
+
+/*# sourceMappingURL=styles.css.map */

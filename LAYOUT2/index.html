@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="d3.min.js"></script>
+
+    <script src="js/listItems.js"></script>
+    <script src="js/populationPie.js"></script>
+    <script src="js/respondersPie.js"></script>
+    <script src="js/barGraph.js"></script>
+    <script src="js/colours.js"></script>
+
+    <script src="js/RespondersPie2.js"></script>
+    <script src="js/populationPie2.js"></script>
+    <script src="js/listItems2.js"></script>
+    <script src="js/barGraph2.js"></script>
+
+
+    <link rel="stylesheet" href="css/styles.css" type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100,300,500,700italic,500italic' rel='stylesheet' type='text/css'>
+
+    <title>Layout 2</title>
+
+
+</head>
+
+<body>
+
+<div id="outerContainer">
+
+    <header>
+        <h1>David &amp; Quince</h1>
+        <span>Responders Dashboard - Side by side comparison</span>
+        <img src="img/amazeone_logo.png" width="200">
+    </header>
+
+
+    <section id="left">
+        <div id="sidebar">
+            <select onchange="loadData(value);">
+                <option value="js/data/ageband.json">Age Band</option>
+                <option value="js/data/gender.json">Gender</option>
+                <option value="js/data/mosaicgroup.json">Mosaic Group</option>
+            </select>
+            <section id="categories">
+                <h2>Customer Group</h2>
+                <ul id="categoryUL"></ul>
+            </section>
+        </div>
+        <div id="graphsContainer">
+            <section id="pieCharts">
+                <div class="pieChart">
+                    <h2>Responders</h2>
+                    <div id="RespondersPie"></div>
+                </div>
+                <div class="pieChart">
+                    <h2>UK Population</h2>                
+                    <div id="UKPopulationPie"></div>
+                </div>       
+            </section>
+            <section id="ZScores">
+                <h2>Z Score</h2>
+                <div id="barChart"></div>
+            </section>
+        </div>
+    </section>
+
+
+    <section id="right">        
+            <div id="graphsContainer">
+            <section id="pieCharts">
+                <div class="pieChart">
+                    <h2>Responders</h2>
+                    <div id="RespondersPie2"></div>
+                </div>
+                <div class="pieChart">
+                    <h2>UK Population</h2>                
+                    <div id="UKPopulationPie2"></div>
+                </div>       
+            </section>
+            <section id="ZScores">
+                <h2>Z Score</h2>
+                <div id="barChart2"></div>
+            </section>
+        </div>
+        <div id="sidebar">
+                <select onchange="loadData2(value);">
+                    <option value="js/data/ageband.json">Age Band</option>
+                    <option value="js/data/gender.json">Gender</option>
+                    <option value="js/data/mosaicgroup.json">Mosaic Group</option>
+                </select>
+                <section id="categories">
+                    <h2>Customer Group</h2>
+                    <ul id="categoryUL2"></ul>
+                </section>
+            </div>
+    </section>
+
+
+ 
+
+    <!-- <div id="sidebar">
+        <select onchange="loadData(value);">
+            <option value="js/data/ageband.json">Age Band</option>
+            <option value="js/data/gender.json">Gender</option>
+            <option value="js/data/mosaicgroup.json">Mosaic Group</option>
+        </select>
+        <section id="categories">
+            <h2>Customer Group</h2>
+            <ul id="categoryUL"></ul>
+        </section>
+    </div>
+
+
+    <div id="main">
+        <div id="highlight">
+            <div id="text">
+                <p>THE MAIN RESPONDERS WERE <span id="mainCategory"></span> WHO RESPONDED <span id="mainResponder"></span> TIMES.</p>
+                <p>THAT MAKES THEM <span id="mainRPercentage"></span> OF THE RESPONDERS.<br>WHICH IS REPRESENTATIVE OF <span id="totalPopulation"></span> OF THE TOTAL UK POPULATION</p>
+            </div>
+
+        </div>
+
+        <div id="graphsContainer">
+            <section id="pieCharts">
+                <div class="pieChart">
+                    <h2>Responders</h2>
+                    <div id="RespondersPie"></div>
+                </div>
+                <div class="pieChart">
+                    <h2>UK Population</h2>                
+                    <div id="UKPopulationPie"></div>
+                </div>       
+            </section>
+            <section id="ZScores">
+                <h2>Z Score</h2>
+                <div id="barChart"></div>
+            </section>
+        </div>
+    </div> -->
+
+</div>
+
+
+
+<script>
+
+function loadData(jsonData) {
+    createList(jsonData);
+    createBar(jsonData);
+    createRespondersPie(jsonData);
+    createUKPopulationPie(jsonData);
+}
+
+createList('js/data/ageband.json');
+createBar('js/data/ageband.json');
+createRespondersPie('js/data/ageband.json');
+createUKPopulationPie('js/data/ageband.json');
+
+
+
+function loadData2(jsonData2){
+    createRespondersPie2(jsonData2);
+    createUKPopulationPie2(jsonData2);
+    createList2(jsonData2);
+    createBar2(jsonData2);
+}
+
+createRespondersPie2('js/data/ageband.json');
+createUKPopulationPie2('js/data/ageband.json');
+createList2('js/data/ageband.json');
+createBar2('js/data/ageband.json');
+
+
+
+</script>
+
+</body>
+</html>

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+
     <script src="d3.min.js"></script>
+    <script src="jquery-1.11.3.min.js"></script>
 
     <script src="js/listItems.js"></script>
     <script src="js/highlightText.js"></script>
@@ -13,6 +13,10 @@
     <script src="js/highlightRespondersPie.js"></script>
     <script src="js/barGraph.js"></script>
     <script src="js/colours.js"></script>
+
+    <script src="js/responderPieEnlarged.js"></script>
+    <script src="js/populationPieEnlarged.js"></script>
+    <script src="js/barGraphEnlarged.js"></script>
 
     <link rel="stylesheet" href="css/styles.css" type='text/css'>
 
@@ -27,6 +31,8 @@
 <body>
 
 <div id="outerContainer">
+<div id="overlay">
+</div>
 
     <header>
         <h1>David &amp; Quince</h1>
@@ -34,8 +40,26 @@
         <img src="img/amazeone_logo.png" width="200">
     </header>
 
-    <section id="control">
-        
+    <div id="enlarge">
+        <div class="pieChart">
+            <h2>Responders</h2>
+            <div id="RespondersPieEnlarged"></div>
+        </div>
+    </div>
+    <div id="enlarge2">
+        <div class="pieChart">
+            <h2>UK Population</h2>
+            <div id="UKPopulationPieEnlarged"></div>
+        </div>
+    </div>
+    <div id="enlarge3">
+        <div class="pieChart">
+            <h2>Z Score</h2>
+            <div id="barChartEnlarged"></div>
+        </div>
+    </div>
+
+    <section id="control">        
     </section>   
 
     <div id="sidebar">
@@ -67,18 +91,18 @@
 
         <div id="graphsContainer">
             <section id="pieCharts">
-                <div class="pieChart">
+                <div class="pieChart" id="firstPie">
                     <h2>Responders</h2>
                     <div id="RespondersPie"></div>
                 </div>
-                <div class="pieChart">
+                <div class="pieChart" id="secondPie">
                     <h2>UK Population</h2>                
                     <div id="UKPopulationPie"></div>
-                </div>       
+                </div>
             </section>
-            <section id="ZScores">
+            <section class="ZScores" id="theBarChart">
                 <h2>Z Score</h2>
-                <div id="barChart"></div>
+                <div class="barChart"></div>
             </section>
         </div>
     </div>
@@ -89,6 +113,7 @@
 
 <script>
 
+
 function loadData(jsonData) {
     createList(jsonData);
     createBar(jsonData);
@@ -96,6 +121,9 @@ function loadData(jsonData) {
     createUKPopulationPie(jsonData);
     createHighlight(jsonData);
     createhighlightRespondersPie(jsonData);
+    createRespondersPieEnlarged(jsonData);
+    createUKPopulationPieEnlarged(jsonData);
+    createBarEnlarged(jsonData);
 }
 
 createList('js/data/ageband.json');
@@ -104,20 +132,93 @@ createRespondersPie('js/data/ageband.json');
 createUKPopulationPie('js/data/ageband.json');
 createHighlight('js/data/ageband.json');
 createhighlightRespondersPie('js/data/ageband.json');
+createRespondersPieEnlarged('js/data/ageband.json');
+createUKPopulationPieEnlarged('js/data/ageband.json');
+createBarEnlarged('js/data/ageband.json');
+
+$('#firstPie').click(function(){
+    $('#overlay').animate({
+        'opacity':'0.9'
+    },200);
+    $('#overlay').css({
+        'display':'block'
+    })
+
+    $('#enlarge').css({
+        'display':'block'        
+    })
+    $('#enlarge').animate({
+        'height':'650px',
+    },400);
+
+    setTimeout(function makeChart(){            
+            createRespondersPieEnlarged(currentData);
+    }, 100);
+});
+
+$('#secondPie').click(function(){
+    $('#overlay').animate({
+        'opacity':'0.9'
+    },200);
+    $('#overlay').css({
+        'display':'block'
+    })
+
+    $('#enlarge2').css({
+        'display':'block'        
+    })
+    $('#enlarge2').animate({
+        'height':'650px',
+    },400);
+
+    setTimeout(function makeChart(){            
+            createUKPopulationPieEnlarged(currentData);
+    }, 100);
+});
+
+$('#theBarChart').click(function(){
+    $('#overlay').animate({
+        'opacity':'0.9'
+    },200);
+    $('#overlay').css({
+        'display':'block'
+    })
+
+    $('#enlarge3').css({
+        'display':'block'        
+    })
+    $('#enlarge3').animate({
+        'height':'650px',
+    },400);
+
+    setTimeout(function makeChart(){            
+            createUKPopulationPieEnlarged(currentData);
+    }, 100);
+});
+
+$('#overlay, #enlarge, #enlarge2, #enlarge3').click(function(){
+     $('#overlay').animate({
+        'opacity':'0'
+    },200);
+    $('#overlay').css({
+        'display':'none'
+    })
+
+    $('#enlarge, #enlarge2, #enlarge3').animate({
+        'height':'0px',
+    },400);
+
+    setTimeout(function(){
+        $('#enlarge, #enlarge2, #enlarge3').css({
+            'display':'none'        
+        })
+    }, 400); 
+})
 
 
 
 
-// for (i=0; i<categoryData.length; i++){
-//     //Create new <li>
-//     var newLI = document.createElement("LI");
-//     //Create new text, which will be got by looping through categoryData
-//     var categoryValue = document.createTextNode(categoryData[i].Category);
-//     //Add that new text to the new <li>
-//     newLI.appendChild(categoryValue);
-//     //Add the new <li> to the <ul>
-//     document.getElementById("categoryUL").appendChild(newLI);
-// };
+
 
 
 </script>

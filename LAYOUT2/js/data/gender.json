@@ -1,0 +1,16 @@
+[
+	{
+		"Category" : "Female",
+		"Responders" : 3040,
+		"UKPopulation" : 51,
+		"Index" : 138,
+		"ZScore" : 27.8
+	},
+	{
+		"Category" : "Male",
+		"Responders" : 1283,
+		"UKPopulation" : 49,
+		"Index" : 61,
+		"ZScore" : -27.8
+	}
+]

@@ -1,0 +1,107 @@
+[
+	{
+		"Category" : "Very Young Family",
+		"Responders" : 8,
+		"UKPopulation" : 1,
+		"Index" : 85,
+		"ZScore" : -0.5
+	},
+	{
+		"Category" : "Very Young Single",
+		"Responders" : 13,
+		"UKPopulation" : 2,
+		"Index" : 49,
+		"ZScore" : -3.8
+	},
+	{
+		"Category" : "Very Young Homesharers",
+		"Responders" : 3,
+		"UKPopulation" : 0,
+		"Index" : 58,
+		"ZScore" : -1.3
+	},
+	{
+		"Category" : "Young Family",
+		"Responders" : 33,
+		"UKPopulation" : 6,
+		"Index" : 93,
+		"ZScore" : -5.3 
+	},
+	{
+		"Category" : "Young Single",
+		"Responders" : 41,
+		"UKPopulation" : 6,
+		"Index" : 93,
+		"ZScore" : -4.7 
+	},
+	{
+		"Category" : "Young Homesharers",
+		"Responders" : 11,
+		"UKPopulation" : 2,
+		"Index" : 93,
+		"ZScore" : -1.9 
+	},
+	{
+		"Category" : "Mature Family",
+		"Responders" : 85,
+		"UKPopulation" : 12,
+		"Index" : 93,
+		"ZScore" : -4.9 
+	},
+	{
+		"Category" : "Mature Singles",
+		"Responders" : 59,
+		"UKPopulation" : 7,
+		"Index" : 93,
+		"ZScore" : -2.8 
+	},
+	{
+		"Category" : "Mature Homesharers",
+		"Responders" : 21,
+		"UKPopulation" : 2,
+		"Index" : 93,
+		"ZScore" : 0.1 
+	},
+	{
+		"Category" : "Older Family",
+		"Responders" : 288,
+		"UKPopulation" : 25,
+		"Index" : 93,
+		"ZScore" : 0.9 
+	},
+	{
+		"Category" : "Older Single",
+		"Responders" : 167,
+		"UKPopulation" : 11,
+		"Index" : 93,
+		"ZScore" : 3.5 
+	},
+	{
+		"Category" : "Older Homesharers",
+		"Responders" : 55,
+		"UKPopulation" : 2,
+		"Index" : 93,
+		"ZScore" : 3.9 
+	},
+	{
+		"Category" : "Elderly Family",
+		"Responders" : 159,
+		"UKPopulation" : 11,
+		"Index" : 93,
+		"ZScore" : 2.9 
+	},
+	{
+		"Category" : "Elderly Single",
+		"Responders" : 149,
+		"UKPopulation" : 11,
+		"Index" : 93,
+		"ZScore" : 2.6 
+	},
+	{
+		"Category" : "Elderly Homesharers",
+		"Responders" : 16,
+		"UKPopulation" : 1,
+		"Index" : 93,
+		"ZScore" : 2
+	}
+]

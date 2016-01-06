@@ -45,6 +45,7 @@
                 <option value="js/data/ageband.json">Age Band</option>
                 <option value="js/data/gender.json">Gender</option>
                 <option value="js/data/mosaicgroup.json">Mosaic Group</option>
+                <option value="js/data/lifestage.json">Life Stages</option>
             </select>
             <section id="categories">
                 <h2>Customer Group</h2>
@@ -91,7 +92,8 @@
                 <select onchange="loadData2(value);">
                     <option value="js/data/ageband.json">Age Band</option>
                     <option value="js/data/gender.json">Gender</option>
-                    <option value="js/data/mosaicgroup.json">Mosaic Group</option>
+                    <option value="js/data/mosaicgroup.json" selected="selected">Mosaic Group</option>
+                    <option value="js/data/lifestage.json">Life Stages</option>
                 </select>
                 <section id="categories">
                     <h2>Customer Group</h2>
@@ -170,10 +172,10 @@ function loadData2(jsonData2){
     createBar2(jsonData2);
 }
 
-createRespondersPie2('js/data/ageband.json');
-createUKPopulationPie2('js/data/ageband.json');
-createList2('js/data/ageband.json');
-createBar2('js/data/ageband.json');
+createRespondersPie2('js/data/mosaicgroup.json');
+createUKPopulationPie2('js/data/mosaicgroup.json');
+createList2('js/data/mosaicgroup.json');
+createBar2('js/data/mosaicgroup.json');
 
 
 

@@ -19,7 +19,7 @@ h1{
 h2{
   font-family: 'Roboto Slab', serif;
   font-size: 28px;
-  padding: 20px 0;
+  padding: 0 0 20px 0;
 }
 
 li{
@@ -90,6 +90,14 @@ header{
     width: 75%;
 }
 
+#categories{
+
+    h2{
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        padding: 10px 0 ;
+    }
+}
 
 
 #graphsContainer{
@@ -131,4 +139,3 @@ svg{
 #control{
     display: block;
 }
-
